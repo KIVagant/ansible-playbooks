@@ -1,10 +1,10 @@
-debian: wheezy
-ntp_server: fr.pool.ntp.org
+debian: wheezy # try jessie
+ntp_server: ru.pool.ntp.org
 nginx_port: 80
 nginx_workers: 4
 php_engine: fpm # (hhvm or apache or fpm)
 db_engine: mariadb # (mysql or mariadb)
 queue_engine: beanstalkd # (beantsalkd or zmq)
-locale_gen: fr_FR.UTF-8
-debian_mirror: ftp.fr.debian.org
-mariadb_mirror: ftp.igh.cnrs.fr/pub
+locale_gen: ru_RU.UTF-8
+debian_mirror: ftp.ru.debian.org
+mariadb_mirror: mirror.timeweb.ru
