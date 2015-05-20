@@ -9,7 +9,7 @@ Supported Tasks
 The following tasks are executed :
 
   - Register [dotdeb](http://www.dotdeb.org/) gpg key
-  - User [french debian mirrors](ftp://ftp.fr.debian.org/)
+  - User [debian mirrors](ftp://ftp.debian.org/)
   - Update and upgrade system
   - Install [vim](http://www.vim.org/)
   - Install [curl](http://curl.haxx.se/)
