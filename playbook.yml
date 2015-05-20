@@ -3,35 +3,36 @@
   hosts: all
   sudo: true
   roles:
-    - { role: apache, when: php_engine == 'apache' }
+#    - { role: apache, when: php_engine == 'apache' }
     - common
-    - ntp
+    - ntp # time sync
     - git
-    - rmate
-    - { role: php-apache, when: php_engine == 'apache' }
+#    - rmate # remote editing for files
+#    - { role: php-apache, when: php_engine == 'apache' }
     - { role: php-fpm, when: php_engine == 'fpm' }
     - { role: php-hhvm, when: php_engine == 'hhvm' }
     - php-extensions
-    - php-maxmind-geoip
-    - php-newrelic
-    - php-phalcon
-    - php-zmq
+#    - php-maxmind-geoip
+#    - php-newrelic # strange proprietary monitoring system
+    - php-phalcon # Learn this instead of Laravel
+    - php-xdebug
+    #- php-zmq
     - composer
     - { role: nginx, when: php_engine != 'apache' }
     - { role: mariadb, when: db_engine == 'mariadb' }
     - { role: mysql, when: db_engine == 'mysql' }
-    - cassandra
-    - mongodb
-    - influxdb
-    - python
-    - sharedance
-    - java
-    - redis
+#    - cassandra # larn this database instead of memcached
+#    - mongodb
+#    - influxdb # learn this for logging http://habrahabr.ru/company/selectel/blog/245515/
+#    - python
+#    - sharedance # session handlers for php, learn this
+    - java # Java Runtime Environment
+#    - redis
     - elasticsearch
-    - scout_realtime
-    - { role: beanstalkd, when: queue_engine == 'beanstalkd' }
-    - { role: zeromq, when: queue_engine == 'zeromq' }
-    - haproxy
-    - imagemagick
-    - graphicsmagick
-    - facedetect
+    - scout_realtime # server remote monitoring ('top') https://scoutapp.com/
+#    - { role: beanstalkd, when: queue_engine == 'beanstalkd' }
+#    - { role: zeromq, when: queue_engine == 'zeromq' }
+    - haproxy # TCP/HTTP Load Balancer
+#    - imagemagick
+    - graphicsmagick # better then imagemagic
+#    - facedetect # photo faces detector (for avatars)
