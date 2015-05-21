@@ -36,3 +36,8 @@
 #    - imagemagick
 #    - graphicsmagick # better then imagemagic
 #    - facedetect # photo faces detector (for avatars)
+    - ajenti
+#    - kibana
+#    - packetbeat # kibana based
+#    - postfix # sendmail alternative
+#    - predictionio # wtf? deploy?
