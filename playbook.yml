@@ -26,13 +26,13 @@
 #    - influxdb # learn this for logging http://habrahabr.ru/company/selectel/blog/245515/
 #    - python
 #    - sharedance # session handlers for php, learn this
-    - java # Java Runtime Environment
+#    - java # Java Runtime Environment
 #    - redis
-    - elasticsearch
+#    - elasticsearch
     - scout_realtime # server remote monitoring ('top') https://scoutapp.com/
 #    - { role: beanstalkd, when: queue_engine == 'beanstalkd' }
 #    - { role: zeromq, when: queue_engine == 'zeromq' }
-    - haproxy # TCP/HTTP Load Balancer
+#    - haproxy # TCP/HTTP Load Balancer
 #    - imagemagick
-    - graphicsmagick # better then imagemagic
+#    - graphicsmagick # better then imagemagic
 #    - facedetect # photo faces detector (for avatars)
